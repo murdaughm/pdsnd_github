@@ -17,7 +17,7 @@ print('- Start Station and End Station (location)')
 print('- User\'s Gender')
 print('- User\'s Birth Year')
 print('- Whether or not the User was a subscriber to the program')
-print('\nIf this you are new to this program, it is recommended you preview the raw data to help you understand the data used in this program.')
+print('\nIf you are new to this program, it is recommended you preview the raw data to help you understand the data used in this program.')
 
 prvw_yn = input('\nWould you like to preview the raw data? Type "Y" or "N" for yes or no: ').lower()
 
