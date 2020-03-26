@@ -93,7 +93,7 @@ def get_filtrd_df():
     months_str = ', '.join(months_str_list).title()
 
     #inform the user which months have data available for the city they chose.
-    print('\n{} has data available for the months of {}.'.format(city.title(), months_str))
+    print('\nYou have chosen {}. {} has data available for the months of {}.'.format(city.title(), city.title(), months_str))
 
     while True:
         try:
