@@ -23,7 +23,12 @@ Data was collected for each trip taken and includes:
 Statistics for the above data are calculated and displayed by the program using user input to filter the data.
 
 ### Files used
-Include the files used
+Files needed for the program:
+Bikeshare.py  
+chicago.csv  
+new_york_city.csv  
+README.md   
+washington.csv
 
 ### Credits
 Sources cited:
