@@ -303,6 +303,7 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         print('-+'*40)
         if restart.lower() != 'yes':
+            print('-+'*15+'Terminating Program '+'-+'*15+'\n'+'-+'*40)
             break
 
 
