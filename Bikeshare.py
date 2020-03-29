@@ -38,7 +38,7 @@ if prvw_yn == 'y':
 month_dict = {1:'january', 2:'february', 3:'march', 4:'april', 5:'may', 6:'june', 7:'july', 8:'august', 9:'september', 10:'october', 11:'november', 12:'december'}
 
 #to help with working with days, I'm making a dictionary of the days of the week:
-day_dict = {1:'sunday', 2:'monday', 3:'tuesday', 4:'wednesday', 5:'thursday', 6:'friday', 7:'saturday'}
+day_dict = {6:'sunday', 0:'monday', 1:'tuesday', 2:'wednesday', 3:'thursday', 4:'friday', 6:'saturday'}
 
 def get_filtrd_df():
     """
@@ -130,19 +130,24 @@ def get_filtrd_df():
         except:
             print('\nInvalid input.')
 
-    if dow == 0:
-        print('\nYou have chosen to view data for all days of the week')
+    #define a dictionary to convert dow to pandas .dt.weekday function with  monday = 0 and sunday = 6
+    dow_dict = {0:7, 1:6, 2:0, 3:1, 4:2, 5:3, 6:4, 7:5}
 
+    #redefine dow so that dow works nicely with pandas .dt.weekday function
+    dow = dow_dict[dow]
+
+    if dow == 7:
+        print('\nYou have chosen to view data for all days of the week')
     else:
         print('\nYou have chosen to view data for {}'.format(day_dict[dow].title()))
 
     #create 'day_of_week' column in dataframe - code structure borrowed from Udacity's solution to practice problems
     df['day_of_week'] = df['Start Time'].dt.weekday
 
-    if dow == 0:
+    if dow == 7:
         pass
     else:
-        is_day = df['day_of_week'] == dow - 1
+        is_day = df['day_of_week'] == dow
         df = df[is_day]
 
     #finish formatting dataframe to the dtype's and columns that will be used in the data analysis
