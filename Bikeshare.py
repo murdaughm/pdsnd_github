@@ -38,7 +38,7 @@ if prvw_yn == 'y':
 month_dict = {1:'january', 2:'february', 3:'march', 4:'april', 5:'may', 6:'june', 7:'july', 8:'august', 9:'september', 10:'october', 11:'november', 12:'december'}
 
 #to help with working with days, I'm making a dictionary of the days of the week:
-day_dict = {6:'sunday', 0:'monday', 1:'tuesday', 2:'wednesday', 3:'thursday', 4:'friday', 6:'saturday'}
+day_dict = {6:'sunday', 0:'monday', 1:'tuesday', 2:'wednesday', 3:'thursday', 4:'friday', 5:'saturday'}
 
 def get_filtrd_df():
     """
